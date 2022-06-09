@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Grid, CuisineCard } from '../components/shared/styled'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Searched = () => {
   const [searchedRecipes, setSearchedRecipes] = useState([])
@@ -32,8 +33,10 @@ const Searched = () => {
 
   const recipeMatches = searchedRecipes.map((item) => (
     <CuisineCard key={item.id}>
+      <Link to={`/recipe/${item.id}`}>
       <img src={item.image} alt={item.title} />
       <h4>{item.title}</h4>
+      </Link>
     </CuisineCard>
   ))
 

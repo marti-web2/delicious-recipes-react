@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Wrapper, Card, Gradient } from "./shared/styled"
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
+import { Link } from "react-router-dom"
 
 const Popular = () => {
   const [popular, setPopular] = useState([])
@@ -31,9 +32,11 @@ const Popular = () => {
   const popularRecipes = popular.map((recipe) => (
     <SplideSlide key={recipe.id}>
       <Card>
+        <Link to={`/recipe/${recipe.id}`}>
         <p>{recipe.title}</p>
         <img src={recipe.image} alt={recipe.title} />
         <Gradient />
+        </Link>
       </Card>
     </SplideSlide>
   ))
