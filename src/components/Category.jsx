@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 const Category = () => (
   <List>
-    {/* <NavLink to={"/cuisine/Italian"}>
+    <NavLink to={"/cuisine/Italian"}>
       <FaPizzaSlice />
       <h4>Italian</h4>
     </NavLink>
@@ -21,7 +21,7 @@ const Category = () => (
     <NavLink to={"/cuisine/Chinese"}>
       <GiChopsticks />
       <h4>Chinese</h4>
-    </NavLink> */}
+    </NavLink>
   </List>
 )
 
