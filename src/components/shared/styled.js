@@ -45,3 +45,9 @@ export const Gradient = styled.div`
   height: 100%;
   background-color: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5))
 `
+
+export const List = styled.div`
+  display: flex;
+  justify-content: center;
+  marigin: 2rem 0rem;
+`

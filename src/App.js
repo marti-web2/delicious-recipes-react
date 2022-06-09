@@ -1,8 +1,9 @@
-import Home from "./pages/Home"
 import Pages from "./pages/Pages"
+import Category from "./components/Category"
 
 const App = () => (
     <div className="App">
+      <Category />
      <Pages />
     </div>
   )

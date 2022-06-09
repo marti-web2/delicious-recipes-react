@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Wrapper, Card, Gradient } from "../styled"
+import { Wrapper, Card, Gradient } from "./shared/styled"
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
 
@@ -17,7 +17,7 @@ const Veggie = () => {
           have to keep making requests from the API during development*/
         localStorageItem ? setVeggie(JSON.parse(localStorageItem)) : (async () => {
             const api = await fetch(
-                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
+                `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
             )
             const data = await api.json()
 
@@ -48,7 +48,7 @@ const Veggie = () => {
                         drag: "free",
                         gap: "5rem",
                         pagination: false,
-                        perPage: 4,
+                        perPage: 3,
                         speed: 25,
                         waitForTransition: true,
                         wheel: true
