@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 
 export const Wrapper = styled.div`
@@ -53,7 +54,7 @@ export const List = styled.div`
   marigin: 2rem 0rem;
 `
 
-export const Grid = styled.div`
+export const Grid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
   grid-gap: 3rem;
