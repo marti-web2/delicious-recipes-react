@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "NODE_ENV='production' webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "gulp": "gulp"
@@ -51,6 +51,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.52.3"
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.52.3",
+    "webpack-cli": "^4.9.2"
   }
 }

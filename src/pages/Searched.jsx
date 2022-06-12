@@ -1,9 +1,9 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Grid, CuisineCard } from '../components/shared/styled'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+
+import { Grid, CuisineCard } from '../components/shared/styled.jsx'
 
 const Searched = () => {
   const [searchedRecipes, setSearchedRecipes] = useState([])

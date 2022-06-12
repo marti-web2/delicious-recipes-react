@@ -4,7 +4,7 @@ const minifyCss = require('gulp-clean-css')
 const sourceMaps = require('gulp-sourcemaps')
 const concat = require('gulp-concat')
 
-const sassSrc = './src/css/**/*.scss'
+const sassSrc = './src/sass/**/*.scss'
 const outputDir = './src'
 
 const bundleSass = () => {
@@ -12,7 +12,7 @@ const bundleSass = () => {
     .pipe(sourceMaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('index.css'))
-    .pipe(minifyCss())
+    // .pipe(minifyCss())
     .pipe(sourceMaps.write())
     .pipe(dest(outputDir))
 }

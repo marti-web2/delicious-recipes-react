@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import { Wrapper, Card, Gradient } from "./shared/styled"
 import { Splide, SplideSlide } from "@splidejs/react-splide"
 import "@splidejs/splide/dist/css/splide.min.css"
 import { Link } from "react-router-dom"
+
+import { Wrapper, Card, Gradient } from "./shared/styled.jsx"
 
 const Popular = () => {
   const [popular, setPopular] = useState([])

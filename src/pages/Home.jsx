@@ -1,6 +1,7 @@
-import Veggie from "../components/Veggie"
-import Popular from "../components/Popular"
 import { motion } from "framer-motion"
+
+import Veggie from "../components/Veggie.jsx"
+import Popular from "../components/Popular.jsx"
 
 import React from "react"
 

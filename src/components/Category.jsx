@@ -1,8 +1,9 @@
 import { FaPizzaSlice, FaHamburger } from 'react-icons/fa'
 import { GiNoodles, GiChopsticks } from 'react-icons/gi'
 import styled from 'styled-components'
-import { List } from './shared/styled'
 import { NavLink } from 'react-router-dom'
+
+import { List } from './shared/styled.jsx'
 
 const Category = () => (
   <List>

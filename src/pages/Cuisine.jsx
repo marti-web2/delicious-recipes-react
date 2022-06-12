@@ -1,11 +1,9 @@
 import React from "react"
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { Link, useParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import "@splidejs/splide/dist/css/splide.min.css"
 
-import { Grid, CuisineCard } from "../components/shared/styled"
+import { Grid, CuisineCard } from "../components/shared/styled.jsx"
 
 
 const Cuisine = () => {

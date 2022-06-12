@@ -1,10 +1,10 @@
 import { BrowserRouter, Link } from "react-router-dom"
-import Search from "./components/Search"
+import Search from "./components/Search.jsx"
 import styled from 'styled-components'
 import { GiKnifeFork } from "react-icons/gi"
 
-import Pages from "./pages/Pages"
-import Category from "./components/Category"
+import Pages from "./pages/Pages.jsx"
+import Category from "./components/Category.jsx"
 
 const App = () => (
   <div className="App">

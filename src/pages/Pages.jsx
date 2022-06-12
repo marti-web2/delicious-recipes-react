@@ -2,10 +2,10 @@ import React from 'react'
 import { Route, Routes, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 
-import Home from './Home'
-import Cuisine from "./Cuisine"
-import Searched from './Searched'
-import Recipe from './Recipe'
+import Home from './Home.jsx'
+import Cuisine from "./Cuisine.jsx"
+import Searched from './Searched.jsx'
+import Recipe from './Recipe.jsx'
 
 const Pages = () => {
  const location = useLocation()
