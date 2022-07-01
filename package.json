@@ -25,7 +25,8 @@
     "build": "NODE_ENV='production' webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "prettier": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.7.1",
     "sass": "^1.52.3",
     "webpack-cli": "^4.9.2"
   }

@@ -1,55 +1,63 @@
-import React from "react"
+import React from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { useState, useEffect } from "react"
-import "@splidejs/splide/dist/css/splide.min.css"
+import { useState, useEffect } from 'react'
+import '@splidejs/splide/dist/css/splide.min.css'
 
-import { Grid, CuisineCard } from "../components/shared/styled.jsx"
-
+import { Grid, CuisineCard } from '../components/shared/styled.jsx'
 
 const Cuisine = () => {
   const [cuisine, setCuisine] = useState([])
   let params = useParams()
 
-  useEffect(_ => {
-    getCuisine(params.category)
-  }, [params.category])
+  useEffect(
+    _ => {
+      getCuisine(params.category)
+    },
+    [params.category]
+  )
 
-  const getCuisine = (name) => {
+  const getCuisine = name => {
     const localStorageItem = localStorage.getItem(`${name} cuisine`)
-    
+
     /* Cache items on first pull and pull from cache on subsequent requests, so that we do not
       have to keep making requests from the API during development */
-    localStorageItem ? setCuisine(JSON.parse(localStorageItem)) : (async () => {
-      const data = await fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`
-      )
-      const recipes = await data.json()
+    localStorageItem
+      ? setCuisine(JSON.parse(localStorageItem))
+      : (async () => {
+          const data = await fetch(
+            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`
+          )
+          const recipes = await data.json()
 
-      /* in localStorage, we can only save Strings, so we're taking the array, converting into 
+          /* in localStorage, we can only save Strings, so we're taking the array, converting into 
         a String and saving when we're pulling it back, we're parsing it back to the array from String */
-      localStorage.setItem(`${name} cuisine`, JSON.stringify(recipes.results))
-      setCuisine(recipes.results)
-    })()
+          localStorage.setItem(
+            `${name} cuisine`,
+            JSON.stringify(recipes.results)
+          )
+          setCuisine(recipes.results)
+        })()
   }
 
-  const cuisineClassification = cuisine.map((item) => (
+  const cuisineClassification = cuisine.map(item => (
     <CuisineCard key={item.id}>
       <Link to={`/recipe/${item.id}`}>
-      <img src={item.image} alt={item.title} />
-      <h4>{item.title}</h4>
+        <img src={item.image} alt={item.title} />
+        <h4>{item.title}</h4>
       </Link>
     </CuisineCard>
   ))
-  
+
   return (
-  <Grid animate={{opacity: 1 }}
-        initial={{opacity: 0}}
-        exit={{opacity: 0}}
-        transition={{duration: 0.5}}
- >
-    {cuisineClassification}
-  </Grid>
-)
-  }
+    <Grid
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {cuisineClassification}
+    </Grid>
+  )
+}
 
 export default Cuisine

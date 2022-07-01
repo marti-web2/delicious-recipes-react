@@ -1,19 +1,19 @@
-import { BrowserRouter, Link } from "react-router-dom"
-import Search from "./components/Search.jsx"
+import { BrowserRouter, Link } from 'react-router-dom'
+import Search from './components/Search.jsx'
 import styled from 'styled-components'
-import { GiKnifeFork } from "react-icons/gi"
+import { GiKnifeFork } from 'react-icons/gi'
 
-import Pages from "./pages/Pages.jsx"
-import Category from "./components/Category.jsx"
+import Pages from './pages/Pages.jsx'
+import Category from './components/Category.jsx'
 
 const App = () => (
   <div className="App">
     <BrowserRouter>
-    <Nav>
-      <GiKnifeFork />
-      <Logo to={"/"}>D3licious D1nner D1shes</Logo>
-    </Nav>
-    <Search />
+      <Nav>
+        <GiKnifeFork />
+        <Logo to={'/'}>D3licious D1nner D1shes</Logo>
+      </Nav>
+      <Search />
       <Category />
       <Pages />
     </BrowserRouter>

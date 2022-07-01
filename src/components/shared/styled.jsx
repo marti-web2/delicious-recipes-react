@@ -1,6 +1,5 @@
-import styled from "styled-components"
-import { motion } from "framer-motion"
-
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const Wrapper = styled.div`
   margin: 4rem 0;
@@ -11,7 +10,6 @@ export const Card = styled.div`
   border-radius: 2rem;
   overflow: hidden;
   position: relative;
-
 
   img {
     border-radius: 2rem;
@@ -24,7 +22,7 @@ export const Card = styled.div`
 
   p {
     position: absolute;
-    z-index:10;
+    z-index: 10;
     left: 50%;
     bottom: 0%;
     transform: translate(-50%, 0%);
@@ -45,7 +43,7 @@ export const Gradient = styled.div`
   postion: absoulute;
   width: 100%;
   height: 100%;
-  background-color: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5))
+  background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `
 
 export const List = styled.div`
@@ -56,7 +54,7 @@ export const List = styled.div`
 
 export const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 3rem;
 `
 
@@ -66,13 +64,12 @@ export const CuisineCard = styled.div`
     border-radius: 2rem;
   }
 
-  a{
+  a {
     text-decoration: none;
   }
-  
-  h4{
+
+  h4 {
     text-align: center;
     padding: 1rem;
-  } 
+  }
 `
-

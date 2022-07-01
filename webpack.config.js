@@ -1,7 +1,7 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports ={
+module.exports = {
   entry: "./src/index.js",
   module: {
     rules: [
@@ -29,21 +29,19 @@ module.exports ={
         exclude: [/(node_modules|bower_components)/],
         use: "babel-loader",
       },
-    ]
+    ],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "js/bundle.js"
+    filename: "js/bundle.js",
   },
   plugins: [
-    new HtmlWebpackPlugin(
-      {
-      inject: 'head',
-      filename: path.resolve(__dirname, './dist/index.html'),
+    new HtmlWebpackPlugin({
+      inject: "head",
+      filename: path.resolve(__dirname, "./dist/index.html"),
       template: path.resolve(__dirname, "./public/index.html"),
-      favicon: "./public/favicon-32.ico"
-    },
-    ),
+      favicon: "./public/favicon-32.ico",
+    }),
   ],
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
-}
+};

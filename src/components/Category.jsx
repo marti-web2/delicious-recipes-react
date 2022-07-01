@@ -7,19 +7,19 @@ import { List } from './shared/styled.jsx'
 
 const Category = () => (
   <List>
-    <SLink to={"/cuisine/Italian"}>
+    <SLink to={'/cuisine/Italian'}>
       <FaPizzaSlice />
       <h4>Italian</h4>
     </SLink>
-    <SLink to={"/cuisine/American"}>
+    <SLink to={'/cuisine/American'}>
       <FaHamburger />
       <h4>American</h4>
     </SLink>
-    <SLink to={"/cuisine/Thai"}>
+    <SLink to={'/cuisine/Thai'}>
       <GiNoodles />
       <h4>Thai</h4>
     </SLink>
-    <SLink to={"/cuisine/Chinese"}>
+    <SLink to={'/cuisine/Chinese'}>
       <GiChopsticks />
       <h4>Chinese</h4>
     </SLink>
@@ -45,7 +45,7 @@ const SLink = styled(NavLink)`
     font-size: 0.8rem;
   }
 
-  svg{
+  svg {
     color: white;
     font-size: 1.5rem;
   }
@@ -53,11 +53,11 @@ const SLink = styled(NavLink)`
   &:active {
     background: linear-gradient(to right, #f27123, #e94059);
 
-    svg{
+    svg {
       color: white;
     }
 
-    h4{
+    h4 {
       color: white;
     }
   }

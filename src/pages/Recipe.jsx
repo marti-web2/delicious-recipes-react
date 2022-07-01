@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { useParams } from "react-router-dom"
-import React from "react"
+import { useParams } from 'react-router-dom'
+import React from 'react'
 
 const parse = require('html-react-parser')
 
 const Recipe = () => {
   let params = useParams()
-  const [details, setDetails] = useState({})  //  const details = {}; function setDetails(data) { const details = da }
-  const [activeTab, setActiveTab] = useState("instructions")
+  const [details, setDetails] = useState({}) //  const details = {}; function setDetails(data) { const details = da }
+  const [activeTab, setActiveTab] = useState('instructions')
 
   const fetchDetails = () => {
     const localStorageItem = localStorage.getItem(`details-${params.id}`)
@@ -18,32 +18,36 @@ const Recipe = () => {
       for (var property in obj) {
         if (obj.hasOwnProperty(property)) {
           // Property exists, object is not empty.
-          return false;
+          return false
         }
       }
       // No properties were found, so return TRUE
-      return true;
+      return true
     }
 
     /* Cache items on first pull and pull from cache on subsequent requests, so that we do not
       have to keep making requests from the API during development */
-    !isEmptyObject(localStorageItem) ? setDetails(JSON.parse(localStorageItem)) : (async () => {
-      const data = await fetch(
-        `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=${process.env.REACT_APP_API_KEY}`
-      )
-      const detailData = await data.json()
+    !isEmptyObject(localStorageItem)
+      ? setDetails(JSON.parse(localStorageItem))
+      : (async () => {
+          const data = await fetch(
+            `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=${process.env.REACT_APP_API_KEY}`
+          )
+          const detailData = await data.json()
 
-      /* in localStorage, we can only save Strings, so we're taking the array, converting into 
+          /* in localStorage, we can only save Strings, so we're taking the array, converting into 
         a String and saving when we're pulling it back, we're parsing it back to the array from String */
-      localStorage.setItem(`details-${params.id}`, JSON.stringify(detailData))
-      setDetails(detailData)
-    })()
+          localStorage.setItem(
+            `details-${params.id}`,
+            JSON.stringify(detailData)
+          )
+          setDetails(detailData)
+        })()
   }
 
   useEffect(() => {
     fetchDetails()
   }, [params.id])
-
 
   return (
     <DetailWrapper>
@@ -52,27 +56,29 @@ const Recipe = () => {
         <img src={details.image} alt={details.title} />
       </div>
       <Info>
-
         {/* Since inline html event requires the event to be global, as well as allows for potential confusion with
        JS onclick() method, inline event handling is avoided here. */}
-        <Button className={activeTab === 'instructions' ? 'active' : ''}
+        <Button
+          className={activeTab === 'instructions' ? 'active' : ''}
           onClick={() => setActiveTab('instructions')}
-        >Instructions
+        >
+          Instructions
         </Button>
-        <Button className={activeTab === 'ingredients' ? 'active' : ''}
+        <Button
+          className={activeTab === 'ingredients' ? 'active' : ''}
           onClick={() => setActiveTab('ingredients')}
-        >Ingredients
+        >
+          Ingredients
         </Button>
-        {activeTab === `instructions` && (
+        {activeTab === `instructions` &&
           parse(`
           <div>
             <p>${details.instructions}</p>
           </div>
-          `)
-        )}
+          `)}
         {activeTab === `ingredients` && (
           <ul>
-            {details.extendedIngredients.map((ingredient) => (
+            {details.extendedIngredients.map(ingredient => (
               <li key={ingredient.id}>{ingredient.original}</li>
             ))}
           </ul>
@@ -85,13 +91,13 @@ const Recipe = () => {
 const DetailWrapper = styled.div`
   margin-top: 10rem;
   margin-bottom: 5rem;
-  display:flex;
+  display: flex;
 
   .active {
     background: linear-gradient(35deg, #494949, #313133);
     color: white;
   }
-  
+
   h2 {
     margin-bottom: 2rem;
   }
@@ -111,13 +117,13 @@ const Button = styled.button`
   color: #313131;
   background: white;
   border: 2px solid black;
+  margin-bottom: 2rem;
   margin-right: 2rem;
   font-weight: 600;
 `
 
 const Info = styled.div`
   margin-left: 10rem;
-
 `
 
 export default Recipe

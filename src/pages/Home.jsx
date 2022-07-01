@@ -1,9 +1,9 @@
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
-import Veggie from "../components/Veggie.jsx"
-import Popular from "../components/Popular.jsx"
+import Veggie from '../components/Veggie.jsx'
+import Popular from '../components/Popular.jsx'
 
-import React from "react"
+import React from 'react'
 
 const Home = () => (
   <motion.div
