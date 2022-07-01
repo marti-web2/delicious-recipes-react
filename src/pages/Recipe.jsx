@@ -78,8 +78,9 @@ const Recipe = () => {
           `)}
         {activeTab === `ingredients` && (
           <ul>
-            {details.extendedIngredients.map(ingredient => (
-              <li key={ingredient.id}>{ingredient.original}</li>
+            {/* add index to id to ensure that each child has a unique key */}
+            {details.extendedIngredients.map((ingredient, i) => (
+              <li key={`${ingredient.id}${i}`}>{ingredient.original}</li>
             ))}
           </ul>
         )}
