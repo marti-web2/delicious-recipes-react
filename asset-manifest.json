@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/delicious-recipes-gh-pages/static/css/main.ede26a8c.css",
-    "main.js": "/delicious-recipes-gh-pages/static/js/main.8fce7a7f.js",
-    "index.html": "/delicious-recipes-gh-pages/index.html",
-    "main.ede26a8c.css.map": "/delicious-recipes-gh-pages/static/css/main.ede26a8c.css.map",
-    "main.8fce7a7f.js.map": "/delicious-recipes-gh-pages/static/js/main.8fce7a7f.js.map"
+    "main.css": "/delicious-recipes-react/static/css/main.ede26a8c.css",
+    "main.js": "/delicious-recipes-react/static/js/main.3b84ae1f.js",
+    "index.html": "/delicious-recipes-react/index.html",
+    "main.ede26a8c.css.map": "/delicious-recipes-react/static/css/main.ede26a8c.css.map",
+    "main.3b84ae1f.js.map": "/delicious-recipes-react/static/js/main.3b84ae1f.js.map"
   },
   "entrypoints": [
     "static/css/main.ede26a8c.css",
-    "static/js/main.8fce7a7f.js"
+    "static/js/main.3b84ae1f.js"
   ]
 }
