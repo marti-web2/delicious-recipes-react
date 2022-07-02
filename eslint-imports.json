@@ -1,0 +1,6 @@
+{
+  "extends": ["eslint-etc"],
+  "rules": {
+    "no-unused-declaration": true
+  }
+}
