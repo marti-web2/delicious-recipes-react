@@ -6,7 +6,7 @@ import React from 'react'
 const Recipe = () => {
   let params = useParams()
   const [details, setDetails] = useState({}) //  const details = {}; function setDetails(data) { const details = da }
-  const [activeTab, setActiveTab] = useState('instructions')
+  const [activeTab, setActiveTab] = useState('ingredients')
 
   useEffect(() => {
     const fetchDetails = () => {
@@ -57,16 +57,16 @@ const Recipe = () => {
         {/* Since inline html event requires the event to be global, as well as allows for potential confusion with
        JS onclick() method, inline event handling is avoided here. */}
         <Button
-          className={activeTab === 'instructions' ? 'active' : ''}
-          onClick={() => setActiveTab('instructions')}
-        >
-          Instructions
-        </Button>
-        <Button
           className={activeTab === 'ingredients' ? 'active' : ''}
           onClick={() => setActiveTab('ingredients')}
         >
           Ingredients
+        </Button>
+        <Button
+          className={activeTab === 'instructions' ? 'active' : ''}
+          onClick={() => setActiveTab('instructions')}
+        >
+          Instructions
         </Button>
         {activeTab === `instructions` && Object.keys(details).length !== 0 && (
           <ol>
