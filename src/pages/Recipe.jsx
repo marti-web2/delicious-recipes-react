@@ -92,6 +92,8 @@ const DetailWrapper = styled.div`
   margin-top: 10rem;
   margin-bottom: 5rem;
   display: flex;
+  /* expand the linear-gradient to the full height of the screen */
+  min-height: 75rem;
 
   .active {
     background: linear-gradient(35deg, #494949, #313133);

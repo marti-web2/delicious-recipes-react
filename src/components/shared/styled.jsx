@@ -43,6 +43,7 @@ export const Gradient = styled.div`
   postion: absoulute;
   width: 100%;
   height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `
 
