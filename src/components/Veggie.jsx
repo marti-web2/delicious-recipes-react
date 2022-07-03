@@ -20,16 +20,16 @@ const Veggie = () => {
     localStorageItem
       ? setVeggie(JSON.parse(localStorageItem))
       : (async () => {
-        const api = await fetch(
-          `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
-        )
-        const data = await api.json()
+          const api = await fetch(
+            `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9&tags=vegetarian`
+          )
+          const data = await api.json()
 
-        /* in localStorage, we can only save Strings, so we're taking the array, converting into 
+          /* in localStorage, we can only save Strings, so we're taking the array, converting into 
             a String and saving when we're pulling it back, we're parsing it back to the array from String */
-        localStorage.setItem('veggie', JSON.stringify(data.recipes))
-        setVeggie(data.recipes)
-      })()
+          localStorage.setItem('veggie', JSON.stringify(data.recipes))
+          setVeggie(data.recipes)
+        })()
   }
 
   const veggieRecipes = veggie.map(recipe => (
