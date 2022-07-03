@@ -11,9 +11,9 @@ body::after {
 
 body {
   margin: 0% 20%;
-  background: linear-gradient(to bottom right, hsl(61, 48%, 59%), hsl(61, 38%, 79%), );
+  background: linear-gradient(to bottom right, hsl(61, 48%, 59%), hsl(61, 38%, 79%));
+  min-height: 100vh;
 }
-
 h4 {
   font-size: 1rem;
   color: rgba(56, 56, 56, 1);
