@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import React from 'react'
+import { CuisineCard } from '../components/shared/styled'
 
 const Recipe = () => {
   let params = useParams()
@@ -49,10 +50,10 @@ const Recipe = () => {
 
   return (
     <DetailWrapper>
-      <div>
+     <CuisineCard>
         <h2>{details.title}</h2>
         <img src={details.image} alt={details.title} />
-      </div>
+      </CuisineCard>
       <Info>
         {/* Since inline html event requires the event to be global, as well as allows for potential confusion with
        JS onclick() method, inline event handling is avoided here. */}
