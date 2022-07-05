@@ -9,6 +9,12 @@ body::after {
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+}
+
 body {
   margin: 0% 20%;
   background: linear-gradient(
@@ -16,8 +22,7 @@ body {
     hsl(61, 48%, 59%),
     hsl(61, 38%, 79%)
   );
-  min-height: 100vh;
-  min-width: 100vw;
+ 
 }
 h4 {
   font-size: 1rem;
