@@ -1,7 +1,7 @@
 {
   "name": "delicious-recipes-react",
   "version": "0.1.0",
-  "homepage": "https://marti-web2.github.io/delicious-recipes-react",
+  "homepage": "",
   "private": true,
   "dependencies": {
     "@splidejs/react-splide": "^0.7.7",
