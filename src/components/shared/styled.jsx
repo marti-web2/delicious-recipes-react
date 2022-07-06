@@ -22,23 +22,26 @@ export const List = styled.div`
 
 export const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   grid-gap: 3rem;
 `
 
-export const CuisineCard = styled.div`
-  img {
-    width: 100%;
-    border-radius: 2rem;
+export const CuisineCard = styled.div`  
+img {
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    width: 25vw;
   }
+  border-radius: 2rem;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  h4 {
-    text-align: center;
-    padding: 1rem;
-    color: #000;
-  }
+h4 {
+  padding: 1rem;
+  color: #000;
+}
 `
+

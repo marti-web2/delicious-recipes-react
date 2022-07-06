@@ -3,7 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 import { Link } from 'react-router-dom'
 
-import { Wrapper, CuisineCard } from './shared/styled.jsx'
+import { CuisineCard, Wrapper } from './shared/styled.jsx'
 
 const Veggie = () => {
   const [veggie, setVeggie] = useState([])
@@ -65,5 +65,7 @@ const Veggie = () => {
     </div>
   )
 }
+
+
 
 export default Veggie

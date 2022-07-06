@@ -17,23 +17,30 @@ html {
 
 body {
   margin: 0% 20%;
+  @media screen and (max-width: 768px) {
+    margin: 0% 5%;
+  }
   background: linear-gradient(
     to bottom right,
     hsl(61, 48%, 59%),
     hsl(61, 38%, 79%)
   );
-  
-}
+    
+  }
+
+
 h4 {
-  font-size: 1rem;
+  font-size: clamp($h4-font-min, $h4-font-preferred, $h4-font-max);
   color: rgba(56, 56, 56, 1);
+  font-weight: 500;
 }
 
 h3 {
-  font-size: 1.5rem;
-  color: rgba(56, 56, 56, 1);
+  font-size: clamp($h3-font-min, $h3-font-preferred, $h3-font-max);
+  color: #383838;
   line-height: 2.5rem;
   margin: 2rem 0rem;
+  font-weight: 600;
 }
 
 a {

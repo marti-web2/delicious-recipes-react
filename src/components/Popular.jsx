@@ -3,6 +3,7 @@ import '@splidejs/splide/dist/css/splide.min.css'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+
 import { CuisineCard, Wrapper } from './shared/styled.jsx'
 
 const Popular = () => {
@@ -53,7 +54,7 @@ const Popular = () => {
             drag: 'free',
             gap: '5rem',
             pagination: false,
-            perPage: 4,
+            perPage: 3,
             speed: 25,
             waitForTransition: true,
             wheel: true

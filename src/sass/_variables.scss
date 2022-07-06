@@ -1,0 +1,9 @@
+// Header font sizes
+
+$h4-font-min: 0.95rem;
+$h4-font-preferred: 1vw;
+$h4-font-max: 7.5rem;
+
+$h3-font-min: $h4-font-min * 1.1;
+$h3-font-preferred: $h4-font-preferred * 1.1;
+$h3-font-max: $h4-font-max * 1.1;
