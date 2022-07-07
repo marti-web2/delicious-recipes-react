@@ -132,15 +132,6 @@ const RecipeCard = styled.div`
     width: 31vw;
     border-radius: 2rem;
   }
-
-  a {
-    text-decoration: none;
-  }
-
-  h4 {
-    padding: 1rem;
-    color: #000;
-  }
 `
 
 export default Recipe

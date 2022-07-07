@@ -38,10 +38,6 @@ img {
   border-radius: 2rem;
 }
 
-a {
-  text-decoration: none;
-}
-
 h4 {
   padding: 1rem;
   color: #000;
