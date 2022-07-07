@@ -22,16 +22,19 @@ export const List = styled.div`
 
 export const Grid = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   grid-gap: 3rem;
 `
 
 export const CuisineCard = styled.div`  
 img {
   width: 100%;
-  @media screen and (max-width: 768px) {
-    width: 25vw;
-  }
   border-radius: 2rem;
 }
 

@@ -54,7 +54,13 @@ const Popular = () => {
             drag: 'free',
             gap: '5rem',
             pagination: false,
-            perPage: 3,
+            perPage: 4,
+            breakpoints: {
+              768: {
+                perPage: 3,
+                perMove: 1,
+              },
+            },
             speed: 25,
             waitForTransition: true,
             wheel: true

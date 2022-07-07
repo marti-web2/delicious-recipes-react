@@ -35,7 +35,7 @@ const SLink = styled(NavLink)`
   margin-right: 2rem;
   margin-bottom: 10rem;
   @media screen and (max-width: 768px) { 
-    margin-bottom: 3.5rem;
+    margin-bottom: 3.5vh;
   }
   text-decoration: none;
   background: linear-gradient(35deg, #494949, #313131);
