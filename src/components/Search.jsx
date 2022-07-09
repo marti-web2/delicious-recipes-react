@@ -48,7 +48,7 @@ const FormStyle = styled.form`
     outline: none;
     width: 100%;
     height: 100%;
-    padding-left: 5rem;
+    padding-left: 3.5rem;
     
     font-size: 1.5vw;
   }
