@@ -35,7 +35,7 @@ const FormStyle = styled.form`
 
   div {
     width: 100%;
-    height: 100%;
+    height: 3vh;
     position: relative;
   }
   input {
@@ -47,6 +47,10 @@ const FormStyle = styled.form`
     border-radius: 1rem;
     outline: none;
     width: 100%;
+    height: 100%;
+    padding-left: 5rem;
+    
+    font-size: 1.5vw;
   }
 
   svg {
@@ -55,6 +59,7 @@ const FormStyle = styled.form`
     left: 0%;
     transform: translate(100%, -50%);
     color: white;
+    font-size: 1.05vh;
   }
 `
 
