@@ -22,7 +22,7 @@ const App = () => (
 
 const Logo = styled(Link)`
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   font-weight: 400;
   font-family: 'Lobster Two', cursive;
   color: black;
@@ -35,7 +35,7 @@ const Nav = styled.div`
   align-items: center;
 
   svg {
-    font-size: 2rem;
+    font-size: 1.5vw;
   }
 `
 
