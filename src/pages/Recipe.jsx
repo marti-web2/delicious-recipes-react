@@ -93,6 +93,7 @@ const DetailWrapper = styled.div`
   margin-top: 10rem;
   margin-bottom: 5rem;
   display: flex;
+  width: fit-content;
 
   .active {
     background: linear-gradient(35deg, #494949, #313133);
@@ -129,7 +130,7 @@ const Info = styled.div`
 
 const RecipeCard = styled.div`  
   img {
-    width: 31vw;
+    width: 34vw;
     border-radius: 2rem;
   }
 `
