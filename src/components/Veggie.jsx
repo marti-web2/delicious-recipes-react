@@ -66,6 +66,4 @@ const Veggie = () => {
   )
 }
 
-
-
 export default Veggie

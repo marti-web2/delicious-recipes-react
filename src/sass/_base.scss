@@ -20,33 +20,34 @@ body {
   @media screen and (max-width: 768px) {
     margin: 0% 5%;
     background: linear-gradient(
-    to bottom,
-    hsl(61, 48%, 59%),
-    hsl(61, 38%, 79%)
-  );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+      to bottom,
+      hsl(61, 48%, 59%),
+      hsl(61, 38%, 79%)
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
-  @media screen and (min-width: 769px) { 
+  @media screen and (min-width: 769px) {
     background: linear-gradient(
-    to bottom right,
-    hsl(61, 48%, 59%),
-    hsl(61, 38%, 79%)
-  );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+      to bottom right,
+      hsl(61, 48%, 59%),
+      hsl(61, 38%, 79%)
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
- 
-  }
-
+}
 
 h4 {
   font-size: clamp($h4-font-min, $h4-font-preferred, $h4-font-max);
   color: #383838;
   font-weight: 500;
-  @media  screen and (min-width: 769px) {
-    font-size: clamp($h4-font-min * 1.5, $h4-font-preferred *1.5, $h4-font-max *1.5);
-   
+  @media screen and (min-width: 769px) {
+    font-size: clamp(
+      $h4-font-min * 1.5,
+      $h4-font-preferred * 1.5,
+      $h4-font-max * 1.5
+    );
   }
 }
 

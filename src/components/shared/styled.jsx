@@ -32,15 +32,14 @@ export const Grid = styled(motion.div)`
   grid-gap: 3rem;
 `
 
-export const CuisineCard = styled.div`  
-img {
-  width: 100%;
-  border-radius: 2rem;
-}
+export const CuisineCard = styled.div`
+  img {
+    width: 100%;
+    border-radius: 2rem;
+  }
 
-h4 {
-  padding: 1rem;
-  color: #000;
-}
+  h4 {
+    padding: 1rem;
+    color: #000;
+  }
 `
-

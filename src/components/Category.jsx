@@ -34,7 +34,7 @@ const SLink = styled(NavLink)`
   border-radius: 50%;
   margin-right: 2rem;
   margin-bottom: 10rem;
-  @media screen and (max-width: 768px) { 
+  @media screen and (max-width: 768px) {
     margin-bottom: 3.5vh;
   }
   text-decoration: none;

@@ -3,7 +3,6 @@ import '@splidejs/splide/dist/css/splide.min.css'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-
 import { CuisineCard, Wrapper } from './shared/styled.jsx'
 
 const Popular = () => {
@@ -58,8 +57,8 @@ const Popular = () => {
             breakpoints: {
               768: {
                 perPage: 3,
-                perMove: 1,
-              },
+                perMove: 1
+              }
             },
             speed: 25,
             waitForTransition: true,

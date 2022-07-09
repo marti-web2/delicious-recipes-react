@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import React from 'react'
 
-
 const Recipe = () => {
   let params = useParams()
   const [details, setDetails] = useState({}) //  const details = {}; function setDetails(data) { const details = da }
@@ -50,7 +49,7 @@ const Recipe = () => {
 
   return (
     <DetailWrapper>
-     <RecipeCard>
+      <RecipeCard>
         <h2>{details.title}</h2>
         <img src={details.image} alt={details.title} />
       </RecipeCard>
@@ -134,7 +133,7 @@ const Info = styled.div`
   margin-left: 10rem;
 `
 
-const RecipeCard = styled.div`  
+const RecipeCard = styled.div`
   img {
     width: 28vw;
     border-radius: 2rem;

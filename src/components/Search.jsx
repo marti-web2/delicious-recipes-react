@@ -29,7 +29,7 @@ const Search = () => {
 const FormStyle = styled.form`
   margin: 0rem 25%;
 
-  @media (max-width: 480px) { 
+  @media (max-width: 480px) {
     margin: 0rem 5%;
   }
 
@@ -49,7 +49,6 @@ const FormStyle = styled.form`
     width: 100%;
     height: 100%;
     padding-left: 3.5rem;
-    
     font-size: 1.5vw;
   }
 
