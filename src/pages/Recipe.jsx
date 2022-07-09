@@ -106,6 +106,12 @@ const DetailWrapper = styled.div`
 
   li {
     font-size: 1.2rem;
+    @media screen and (min-width: 769px) {
+      font-size: 1.8rem;
+    }
+    @media screen and (min-width: 2100px) {
+      font-size: 2.4rem;
+    }
     line-height: 2.5rem;
   }
 
@@ -130,7 +136,7 @@ const Info = styled.div`
 
 const RecipeCard = styled.div`  
   img {
-    width: 34vw;
+    width: 28vw;
     border-radius: 2rem;
   }
 `
