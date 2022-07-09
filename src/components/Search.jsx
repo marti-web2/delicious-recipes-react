@@ -49,7 +49,7 @@ const FormStyle = styled.form`
     width: 100%;
     height: 100%;
     padding-left: 2.75rem;
-    font-size: 1.5vw;
+    font-size: 2.05vh;
   }
 
   svg {
