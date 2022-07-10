@@ -39,19 +39,19 @@ const SLink = styled(NavLink)`
   }
   text-decoration: none;
   background: linear-gradient(35deg, #494949, #313131);
-  width: 10vw;
-  height: 10vw;
+  width: 9vw;
+  height: 9vw;
   cursor: pointer;
   transform: scale(0.8);
 
   h4 {
     color: white;
-    font-size: 1.35vw;
+    font-size: 1.25vw;
   }
 
   svg {
     color: white;
-    font-size: 2.75vw;
+    font-size: 2.25vw;
     margin-bottom: 0.75vw;
   }
 
