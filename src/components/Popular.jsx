@@ -13,21 +13,19 @@ const Popular = () => {
   }, [])
 
   const getPopular = () => {
-    const localStorageItem = localStorage.getItem('popular')
+    const sessionStorageItem = sessionStorage.getItem('popular')
 
-    /* Cache items on first pull and pull from cache on subsequent requests, so that we do not
-      have to keep making requests from the API during development*/
-    localStorageItem
-      ? setPopular(JSON.parse(localStorageItem))
+    sessionStorageItem
+      ? setPopular(JSON.parse(sessionStorageItem))
       : (async () => {
           const api = await fetch(
             `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`
           )
           const data = await api.json()
 
-          /* in localStorage, we can only save Strings, so we're taking the array, converting into 
+          /* in sessionStorage, we can only save Strings, so we're taking the array, converting into 
       a String and saving when we're pulling it back, we're parsing it back to the array from String */
-          localStorage.setItem('popular', JSON.stringify(data.recipes))
+          sessionStorage.setItem('popular', JSON.stringify(data.recipes))
           setPopular(data.recipes)
         })()
   }

@@ -17,21 +17,19 @@ const Cuisine = () => {
   )
 
   const getCuisine = name => {
-    const localStorageItem = localStorage.getItem(`${name} cuisine`)
+    const sessionStorageItem = sessionStorage.getItem(`${name} cuisine`)
 
-    /* Cache items on first pull and pull from cache on subsequent requests, so that we do not
-      have to keep making requests from the API during development */
-    localStorageItem
-      ? setCuisine(JSON.parse(localStorageItem))
+    sessionStorageItem
+      ? setCuisine(JSON.parse(sessionStorageItem))
       : (async () => {
           const data = await fetch(
             `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`
           )
           const recipes = await data.json()
 
-          /* in localStorage, we can only save Strings, so we're taking the array, converting into 
+          /* in sessionStorage, we can only save Strings, so we're taking the array, converting into 
         a String and saving when we're pulling it back, we're parsing it back to the array from String */
-          localStorage.setItem(
+          sessionStorage.setItem(
             `${name} cuisine`,
             JSON.stringify(recipes.results)
           )

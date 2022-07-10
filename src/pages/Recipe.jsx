@@ -10,7 +10,7 @@ const Recipe = () => {
 
   useEffect(() => {
     const fetchDetails = () => {
-      const localStorageItem = localStorage.getItem(`details-${params.id}`)
+      const sessionStorageItem = sessionStorage.getItem(`details-${params.id}`)
 
       function isEmptyObject(obj) {
         // Loop through and check if a property exists within the object
@@ -24,19 +24,17 @@ const Recipe = () => {
         return true
       }
 
-      /* Cache items on first pull and pull from cache on subsequent requests, so that we do not
-        have to keep making requests from the API during development */
-      !isEmptyObject(localStorageItem)
-        ? setDetails(JSON.parse(localStorageItem))
+      !isEmptyObject(sessionStorageItem)
+        ? setDetails(JSON.parse(sessionStorageItem))
         : (async () => {
             const data = await fetch(
               `https://api.spoonacular.com/recipes/${params.id}/information?apiKey=${process.env.REACT_APP_API_KEY}`
             )
             const detailData = await data.json()
 
-            /* in localStorage, we can only save Strings, so we're taking the array, converting into 
+            /* in sessionStorage, we can only save Strings, so we're taking the array, converting into 
           a String and saving when we're pulling it back, we're parsing it back to the array from String */
-            localStorage.setItem(
+            sessionStorage.setItem(
               `details-${params.id}`,
               JSON.stringify(detailData)
             )
