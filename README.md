@@ -8,26 +8,23 @@
     <h2>Description</h2>
 <p>Delicious Dining Online is an app that helps users create delicious meals at home. It provides a menu of recipes, which are fetched from the Spoonacular API. Simply search for a type of cuisine or specific ingredient, and we'll show you a range of recipes that meet your criteria. With Delicious Dining Online, cooking delicious meals at home has never been easier!</p>
     <h2>Project Structure</h2>
-    <p>Here is a detailed map of the directory structure of the Delicious Dining Online project:</p>
+<p>Here is an overview of the directory structure of the Delicious Dining Online project:</p>
+<ul>
+  <li>/src
     <ul>
-      <li>/src
-        <ul>
-          <li>/components</li>
-          <li>/pages</li>
-          <li>/services</li>
-          <li>/styles</li>
-          <li>/utils</li>
-        </ul>
-      </li>
-      <li>/public</li>
-      <li>.babelrc</li>
-      <li>.eslintrc.json</li>
-      <li>.gitignore</li>
-      <li>gulpfile.js</li>
-      <li>package.json</li>
-      <li>prettier.config.js</li>
-      <li>webpack.config.js</li>
+      <li>/components</li>
+      <li>/pages</li>
+      <li>/sass</li>
     </ul>
+  </li>
+  <li>/public</li>
+  <li>.babelrc</li>
+  <li>.eslintrc.json</li>
+  <li>.gitignore</li>
+  <li>package.json</li>
+  <li>README.md</li>
+</ul>
+
     <h2>Technologies Used</h2>
     <p>The Delicious Dining Online app is built using the following technologies:</p>
     <ul>
