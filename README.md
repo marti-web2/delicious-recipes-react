@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Delicious Dining Online</title>
+    <h1>Delicious Dining Online</h1>
   </head>
   <body>
     <h1>Delicious Dining Online</h1>
