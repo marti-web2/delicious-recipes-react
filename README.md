@@ -25,14 +25,15 @@
   <li>README.md</li>
 </ul>
     <h2>Technologies Used</h2>
-    <p>The Delicious Dining Online app is built using the following technologies:</p>
-    <ul>
-      <li><a href="https://reactjs.org/docs/getting-started.html">React</a></li>
-      <li><a href="https://gulpjs.com/docs/en/getting-started/quick-start">Gulp</a></li>
-      <li><a href="https://webpack.js.org/concepts/">Webpack</a></li>
-      <li><a href="https://eslint.org/docs/user-guide/getting-started">EsLint</a></li>
-      <li><a href="https://prettier.io/docs/en/install.html">Prettier</a></li>
-    </ul>
+<p>The Delicious Dining Online app is built using the following technologies:</p>
+<ul>
+  <li><a href="https://reactjs.org/docs/getting-started.html">React</a></li>
+  <li><a href="https://gulpjs.com/docs/en/getting-started/quick-start">Gulp</a></li>
+  <li><a href="https://webpack.js.org/concepts/">Webpack</a></li>
+  <li><a href="https://eslint.org/docs/user-guide/getting-started">EsLint</a></li>
+  <li><a href="https://prettier.io/docs/en/install.html">Prettier</a></li>
+  <li><a href="https://sass-lang.com/documentation">Sass</a></li>
+</ul>
     <h2>Future Work</h2>
 <p>There are many exciting features that will be added to Delicious Dining Online in the future. These may include new types of cuisine, the ability to save your favorite recipes for later, and more. Keep an eye on this repository for updates, and feel free to share it with your friends and followers on social media. We hope you continue to enjoy Delicious Dining Online!</p>
 
