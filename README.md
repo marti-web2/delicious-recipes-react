@@ -24,7 +24,6 @@
   <li>package.json</li>
   <li>README.md</li>
 </ul>
-
     <h2>Technologies Used</h2>
     <p>The Delicious Dining Online app is built using the following technologies:</p>
     <ul>
