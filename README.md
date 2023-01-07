@@ -4,7 +4,6 @@
     <h1>Delicious Dining Online</h1>
   </head>
   <body>
-    <h1>Delicious Dining Online</h1>
     <img src="https://www.feastingathome.com/wp-content/uploads/2022/05/Thai-Basil-Chicken-15-380x570.jpg" width="100" height="100" alt="App logo">
     <h2>Description</h2>
 <p>Delicious Dining Online is an app that helps users create delicious meals at home. It provides a menu of recipes, which are fetched from the Spoonacular API. Simply search for a type of cuisine or specific ingredient, and we'll show you a range of recipes that meet your criteria. With Delicious Dining Online, cooking delicious meals at home has never been easier!</p>
